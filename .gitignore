@@ -1,0 +1,3 @@
+#node - essa pasta ignora os arquivos que são baixados para o json server funcionar
+#npm install json-server Este é o comando para o json server e os arquivos serem baixados
+/node_modules

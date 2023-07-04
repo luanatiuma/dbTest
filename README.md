@@ -1,1 +1,1 @@
-# dbTest
+# Simulação de API utilizando um arquivo .json como simulador de banco de dados
