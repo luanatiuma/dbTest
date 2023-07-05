@@ -2,7 +2,6 @@
   "dependencies": {
     "json-server": "^0.17.3"
   },
-
   "scripts": {
     "start": "json-server --watch data/db.json --port 3000",
     "test": "npx cypress open"
