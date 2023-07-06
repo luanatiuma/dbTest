@@ -1,14 +1,33 @@
 {
-    "produtos": [
-        {
-            "id": 1,
-            "descricao": "Sapato",
-            "preco": "19,90"
-        },
-        {
-            "id": 2,
-            "descricao": "Bolsa",
-            "preco": "30,90"
-        }
-    ]
+  "produtos": [
+    {
+      "id": 1,
+      "descricao": "Sapato",
+      "preco": "19,90"
+    },
+    {
+      "id": 2,
+      "descricao": "Bolsa",
+      "preco": "30,90"
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "descricao": "sandália",
+      "preco": "50,00",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "descricao": "sandália",
+      "preco": "50,00"
+    }
+  ]
 }
