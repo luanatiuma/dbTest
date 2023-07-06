@@ -13,6 +13,8 @@ document.querySelector('#buttonCadastro').addEventListener('click', ()=>{
     body: JSON.stringify(dados)
 })
 .then(resposta => {
-    console.log(resposta)
+    if(resposta.ok) {
+        alert('Produto cadastrado')
+    }
 })
 });

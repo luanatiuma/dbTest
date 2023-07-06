@@ -13,23 +13,32 @@
     {
       "id": 3,
       "descricao": "Cinto",
-      "preco":"30,90"
+      "preco": "30,90"
     },
     {
       "id": 4,
       "descricao": "Mala",
       "preco": "199,90"
-
     },
     {
       "id": 5,
       "descricao": "Chinelo",
-      "preco":"19,90"
+      "preco": "19,90"
     },
     {
       "descricao": "Sandália",
       "preco": "50,00",
       "id": 6
+    },
+    {
+      "id": 7,
+      "descricao": "Casaco",
+      "preco": "68,90"
+    },
+    {
+      "id": 8,
+      "descricao": "Jaqueta",
+      "preco": "102,50"
     }
   ]
 }
