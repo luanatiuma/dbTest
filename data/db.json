@@ -11,23 +11,25 @@
       "preco": "30,90"
     },
     {
-      "id": 3
+      "id": 3,
+      "descricao": "Cinto",
+      "preco":"30,90"
     },
     {
-      "id": 4
+      "id": 4,
+      "descricao": "Mala",
+      "preco": "199,90"
+
     },
     {
-      "id": 5
+      "id": 5,
+      "descricao": "Chinelo",
+      "preco":"19,90"
     },
     {
-      "descricao": "sandália",
+      "descricao": "Sandália",
       "preco": "50,00",
       "id": 6
-    },
-    {
-      "id": 7,
-      "descricao": "sandália",
-      "preco": "50,00"
     }
   ]
 }
