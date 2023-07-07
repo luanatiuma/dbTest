@@ -16,6 +16,7 @@ fetch('http://localhost:3000/produtos', {
         for(i=0; i < resposta.length; i++){
 
             const ul = document.createElement('ul');
+            ul.classList.add('produto')
 
             ul.appendChild(document.createElement('li'))
             .innerHTML = resposta[i].id;
