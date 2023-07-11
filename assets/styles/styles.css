@@ -1,7 +1,48 @@
+:root{
+    --background: #FEFFE4;
+    --background2: #FFF1C1;
+    --black: #000;
+}
+
+body{
+    background-color: var(--background);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background2);
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+header li{
+    background-color: var(--background2);
+    padding: 5px;
+    border-radius: 4px;
+}
+header a{
+    text-decoration: none;
+    color: var(--black);
+}
+
 .produto {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
     list-style: none;
+    border-bottom: 1px solid var(--black);
+    padding: 5px;
+    margin: 0;
+}
+
+.produto:nth-child(odd){
+    background-color: var(--background);
+}
+.produto:nth-child(even){
+    background-color: var(--background2);
 }
