@@ -20,15 +20,19 @@
         <legend>Cadastro de Produtos</legend>
 
         <label for="id">ID:</label>
-        <input type="text" id="id" name="id" disabled><br>
+        <input type="text" id="id" name="id" placeholder="digite o ID do produto" disabled><br>
 
         <label for="descricao">Descrição:</label>
-        <input type="text" id="descricao" name="descricao"><br>
+        <input type="text" id="descricao" name="descricao" placeholder="digite a descrição do produto"><br>
 
         <label for="preco">Preço:</label>
-        <input type="text" id="preco" name="preco"><br>
+        <input type="text" id="preco" name="preco" placeholder="digite o preço do produto"><br>
 
-        <button type="button" id="buttonCadastro">Cadastrar</button>
+        <div class="buttons">
+            <button type="button" id="buttonCadastro">Cadastrar</button>
+            <button class="button2">Cancelar</button>
+        </div>
+        
         <!-- Mudando o type ao inves de submit vira button pra ele não fazer a função post, quem vai enviar as informações do formu~lário será o js -->
     </form>
 
