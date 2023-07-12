@@ -1,16 +1,6 @@
 {
   "produtos": [
     {
-      "id": 1,
-      "descricao": "Sapato",
-      "preco": "19,90"
-    },
-    {
-      "id": 2,
-      "descricao": "Bolsa",
-      "preco": "29,90"
-    },
-    {
       "id": 3,
       "descricao": "Cinto",
       "preco": "30,90"

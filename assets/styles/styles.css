@@ -6,11 +6,35 @@
 
 body{
     background-color: var(--background);
+    text-align: center;
+}
+h1{
+    background-color: var(--black);
+    color: var(--background2);
+    width: 20%;
+    margin: 20px auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgb(92, 89, 89);
 }
 form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--background2);
+    padding: 3px;
+    width: 30%;
+    border-radius: 4px;
+    box-shadow: 4px 4px 4px 0px var(--black);
+    margin: 20px auto;
+}
+form button{
+    background-color: var(--black);
+    color: var(--background);
+    border-radius: 5px;
+}
+form button:hover{
+    cursor: pointer;
+    color: var(--black);
     background-color: var(--background2);
 }
 
@@ -23,10 +47,17 @@ header li{
     background-color: var(--background2);
     padding: 5px;
     border-radius: 4px;
+    box-shadow: 2px 2px 2px 2px rgb(92, 89, 89);
 }
 header a{
     text-decoration: none;
     color: var(--black);
+}
+#listaProdutos{
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgb(92, 89, 89);
+    width: 80%;
 }
 
 .produto {
@@ -36,8 +67,9 @@ header a{
     flex-direction: row;
     list-style: none;
     border-bottom: 1px solid var(--black);
-    padding: 5px;
-    margin: 0;
+    padding: 10px;
+    width: 98%;
+    margin: auto;
 }
 
 .produto:nth-child(odd){

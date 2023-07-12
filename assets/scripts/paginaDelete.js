@@ -1,22 +1,24 @@
 
 document.addEventListener('click', evente =>{
+
     if(evente.target.classList.contains('delete-button')){
-        fetch('http://localhost:3000/produtos/${event.target.value}', {
+
+    fetch(`http://localhost:3000/produtos/${evente.target.value}`, {
             method: 'DELETE', headers:{
                 'Content.type': 'application/json'
             }
-            
+        }).then(resposta => {
+            if(resposta.ok){
+                alert('Produto apagado!');
+                location.reload(); //Jeito ruim, será melhorado nas próximas aulas
+            }
+        });
     }
-)}})
-.then(resposta => {
-    if(resposta.ok){
-        alert('Produto apagado!');
-        location.reload(); //Jeito ruim, será melhorado nas próximas aulas
-    }
-});
+})
+
 
 fetch('http://localhost:3000/produtos', {
-            method: 'DELETE',
+            method: 'GET',
             headers: {
                 'Content-type': 'application/json'
             }
