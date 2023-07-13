@@ -1,3 +1,4 @@
+/*Estilos iguais ao protótipo*/
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 :root{
@@ -7,68 +8,100 @@
     --button1: #48A4FA;
     --button2: #FF5F5F;
     --black: #000;
+    --shadow-button: rgba(0, 0, 0, 0.25);
     font-family: Ubuntu;
 }
-
 body{
     background-color: var(--background);
     text-align: center;
 }
+
+/*Títulos*/
 h1{
     color: var(--black);
-    width: 20%;
-    font-size: 32px;
-    margin: 20px auto;
+    font-size: 44px;
 }
+h2{
+    color: var(--black);
+    width: 20%;
+    font-size: 24px;
+    margin: 20px 54px;
+}
+
+/*----------precisam de ajustes ainda---------------*/
+/*Formulário*/
 form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--background3);
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px 0px var(--shadow-button);
+    padding: 22px 59px;
+    margin: auto;
+    width: calc(420px - 59px);
+    height: calc(439px - 22px);
+    font-size: 16px;
+}
+.formulario{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
-    background-color: var(--background3);
-    padding: 58px;
-    border-radius: 12px;
-    box-shadow: 4px 4px 4px 0px var(--black);
-    margin: 20px auto;
-    width: calc(420px - 58px);
-    height: 439px;
 }
+/*Legenda do formulário*/
 legend{
-    font-size: 35px;
-}
-input{
-    Width: 304px;
-    Height: 34px;
-    background-color: var(--background2);
-    border-radius: 4px;
+    font-size: 24px;
 }
 
+/*Input do formulário*/
+input{
+    Width: calc(304px - 5px);
+    Height: calc(34px - 5px);
+    background-color: var(--background2);
+    border-radius: 4px;
+    padding: 5px;
+    border: 1px solid var(--black);
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+/*Botões do formulário*/
 .buttons{
     display: flex;
     width: 85%;
-    justify-content: space-around;
+    justify-content: space-between;
+    height: 46px;
 }
 #btAtualizar, #buttonCadastro{
     background-color: var(--button1);
     color: var(--background3);
     border-radius: 3px;
-    box-shadow: 4px 4px 4px 0px var(--black);
+    box-shadow: 4px 4px 4px 0px var(--shadow-button);
     border: 0;
     padding: 5px;
     width: 167px;
+    height: 46px;
+    font-size: 24px;
+}
+#btAtualizar:hover, #buttonCadastro:hover{
+    cursor: pointer;
+    color: var(--button1);
+    background-color: var(--background3);
 }
 .button2{
     background-color: var(--button2);
-    color: var(--background3);
+    color: #444;
     border-radius: 3px;
-    box-shadow: 4px 4px 4px 0px var(--black);
+    box-shadow: 4px 4px 4px 0px var(--shadow-button);
     border: 0;
     padding: 5px;
     width: 118px;
+    font-size: 18px;
 }
 form button:hover{
     cursor: pointer;
-    color: var(--button1);
+    color: var(--button2);
     background-color: var(--background3);
 }
 
@@ -90,8 +123,8 @@ header a{
 #listaProdutos{
     margin: auto;
     border-radius: 5px;
-    box-shadow: 2px 2px 2px 2px rgb(92, 89, 89);
-    width: 80%;
+    width: 100%;
+    border:54px 54px;
 }
 
 .produto {
@@ -102,8 +135,11 @@ header a{
     list-style: none;
     border-bottom: 1px solid var(--black);
     padding: 10px;
-    width: 98%;
+    /* width: calc(1332px - 10px); */
+    height: calc(43px - 10px);
     margin: auto;
+    font-size: 16px;
+    
 }
 
 .produto:nth-child(odd){

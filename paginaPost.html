@@ -19,14 +19,16 @@
     <form action="" method="post">
         <legend>Cadastro de Produtos</legend>
 
-        <label for="id">ID:</label>
-        <input type="text" id="id" name="id" placeholder="digite o ID do produto" disabled><br>
+        <div class="formulario">
+            <label for="id">ID</label>
+            <input type="text" id="id" placeholder="digite o ID do produto"><br>
 
-        <label for="descricao">Descrição:</label>
-        <input type="text" id="descricao" name="descricao" placeholder="digite a descrição do produto"><br>
+            <label for="descricao">Descrição</label>
+            <input type="text" id="descricao" placeholder="digite a descrição do produto"><br>
 
-        <label for="preco">Preço:</label>
-        <input type="text" id="preco" name="preco" placeholder="digite o preço do produto"><br>
+            <label for="preco">Preço</label>
+            <input type="text" id="preco" placeholder="digite o preço do produto"><br>
+        </div>
 
         <div class="buttons">
             <button type="button" id="buttonCadastro">Cadastrar</button>
@@ -36,7 +38,6 @@
         <!-- Mudando o type ao inves de submit vira button pra ele não fazer a função post, quem vai enviar as informações do formu~lário será o js -->
     </form>
 
-    <h2>Lista de Produtos</h2>
 
     <script src="./assets/scripts/paginaPost.js"></script>
     <script src="./assets/scripts/estilos.js"></script>
