@@ -74,4 +74,32 @@ document.querySelector('#listaProdutos' /*lista produtos é o id da ul onde est�
 
         document.querySelector('input#preco').value = elementoBase.querySelector('[data-produto="preco"]'/*para seletionar os atributos coloca-se []*/).innerHTML;
     }
-});
+
+    //Desafio 2, tirar o disabled do botão de cancelar quando o input tiver com valores
+    //Fazendo sozinha
+//     function habilitaBotao(){
+//         const botaoDesabilitado = document.querySelector('[type="reset"]');
+    
+//         if(evento){
+//             botaoDesabilitado.removeAttribute('disabled');
+//         }
+//         else{
+//               console.log(1)
+//             botaoDesabilitado.setAttribute('disabled', '');
+//         }
+//     };
+    
+//     habilitaBotao()
+// });
+
+//Resposta do Professor para o desafio 2:
+const idPreenchido = document.querySelector('input#id').value !== "";
+const descricaoPreenchido = document.querySelector('input#descricao').value !== "";
+const precoPreenchido = document.querySelector('input#preco').value !== "";
+
+if(idPreenchido === true || descricaoPreenchido ===true || precoPreenchido === true){
+    document.querySelector('button.button2').removeAttribute('disabled');
+}
+else {
+    document.querySelector('button.button2').setAttribute('disabled', '');
+}

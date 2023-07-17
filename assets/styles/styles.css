@@ -17,6 +17,23 @@ body{
     text-align: center;
 }
 
+/*Menu de navegação*/
+header ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+header li{
+    background-color: var(--background2);
+    padding: 5px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 2px rgb(92, 89, 89);
+}
+header a{
+    text-decoration: none;
+    color: var(--black);
+}
+
 /*Títulos*/
 h1{
     color: var(--black);
@@ -29,7 +46,6 @@ h2{
     margin: 20px 54px;
 }
 
-/*----------precisam de ajustes ainda---------------*/
 /*Formulário*/
 form{
     display: flex;
@@ -54,6 +70,7 @@ form{
 /*Legenda do formulário*/
 legend{
     font-size: 24px;
+    font-weight: bold;
 }
 
 /*Input do formulário*/
@@ -65,6 +82,10 @@ input{
     padding: 5px;
     border: 1px solid var(--black);
     box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25) inset;
+}
+input:disabled{
+    cursor: auto;
+    background-color: var(--background);
 }
 
 /*Botões do formulário*/
@@ -90,11 +111,11 @@ input{
     background-color: #007BED;
 }
 .button2{
-    background-color: #F59999;
-    color: #444;
-    border-radius: 3px;
-    box-shadow: 4px 4px 4px 0px var(--shadow-button);
-    border: 0;
+    border-radius: 4px;
+    border: 1px solid #F59999;
+    color: #F59999;
+    background: #FFF;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
     padding: 5px;
     width: 118px;
     font-size: 18px;
@@ -103,28 +124,27 @@ form button:hover{
     cursor: pointer;
     background-color: var(--button2);
 }
+form button:active, #btAtualizar:active, #buttonCadastro:active{
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+button:disabled{
+    color: var(--shadow-button);
+    background: #FFF;
+    border: 1px solid var(--shadow-button);
+}
+button:disabled:hover{
+    background: #FFF;
+    cursor: auto;
+}
 
-header ul{
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-}
-header li{
-    background-color: var(--background2);
-    padding: 5px;
-    border-radius: 4px;
-    box-shadow: 2px 2px 2px 2px rgb(92, 89, 89);
-}
-header a{
-    text-decoration: none;
-    color: var(--black);
-}
+
+/*----------precisam de ajustes ainda---------------*/
+/*Lista de produtos*/
 #listaProdutos{
     border-radius: 5px;
     width: 90%;
     margin: 20px 54px;
 }
-
 .produto {
     display: flex;
     justify-content: space-between;
@@ -138,10 +158,19 @@ header a{
     font-size: 16px;
     
 }
-
 .produto:nth-child(odd){
     background-color: var(--background);
 }
 .produto:nth-child(even){
     background-color: var(--background2);
+}
+#listaProdutos li {
+    display: flex;
+    padding-inline: 40px;
+    font-size: 16pt;
+}
+
+#listaProdutos li:nth-child(2) {
+    margin-right: auto;
+    margin-left: 5rem;
 }
