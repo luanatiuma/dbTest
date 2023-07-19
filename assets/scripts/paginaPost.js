@@ -1,6 +1,8 @@
+
 //parte do js que vai publicar na página post com o botão de cadastrar
 
-document.querySelector('#buttonCadastro').addEventListener('click', ()=>{
+function publicarProdutos() {
+    document.querySelector('#buttonCadastro').addEventListener('click', ()=>{
 
     const dados = {
         'id': null,
@@ -18,3 +20,30 @@ document.querySelector('#buttonCadastro').addEventListener('click', ()=>{
     }
 })
 });
+
+function verificaSeInput () {
+    const idPreenchido = document.querySelector('input#id').value !== "";
+    const descricaoPreenchido = document.querySelector('input#descricao').value !== "";
+    const precoPreenchido = document.querySelector('input#preco').value !== "";
+
+    if(descricaoPreenchido || precoPreenchido){
+    document.querySelector('button.button2').removeAttribute('disabled');
+    document.querySelector('button#buttonCadastro').removeAttribute('disabled');
+    }
+    else {
+    document.querySelector('button.button2').setAttribute('disabled', '');
+    document.querySelector('button#buttonCadastro').setAttribute('disabled', '');
+    };
+
+};
+
+document.querySelector('form').addEventListener('reset', ()=>{
+    document.querySelector('button.button2').setAttribute('disabled', '');
+});
+
+document.querySelector('form').addEventListener('input' /*ou keyup*/, ()=> {
+    verificaSeInput();
+});
+};
+
+export{publicarProdutos};

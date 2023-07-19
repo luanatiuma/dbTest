@@ -106,11 +106,11 @@ input:disabled{
     height: 46px;
     font-size: 24px;
 }
-#btAtualizar:disabled{
+#btAtualizar:disabled, #buttonCadastro:disabled{
     background: rgb(132, 177, 236);
     border: 1px solid var(--shadow-button);
 }
-#btAtualizar:disabled:hover{
+#btAtualizar:disabled:hover, #buttonCadastro:disabled:hover{
     background: rgb(132, 177, 236);
     border: 1px solid var(--shadow-button);
     cursor: not-allowed;

@@ -6,27 +6,41 @@
 // })
 
 //parte do js que vai ler o arquivo json pelo metodo get
-fetch('http://localhost:3000/produtos', {
+function buscaProdutos(){
+    fetch('http://localhost:3000/produtos', {
     method: 'GET', headers: {
         'content-type': 'application/json'
     }
     })
     .then(resposta => resposta.json())
     .then(resposta => {
-        for(i=0; i < resposta.length; i++){
+
+        document.querySelector('#listaProdutos').innerHTML = '';
+
+        for(let i = 0; i < resposta.length; i++) {
 
             const ul = document.createElement('ul');
-            ul.classList.add('produto')
-
-            ul.appendChild(document.createElement('li'))
-            .innerHTML = resposta[i].id;
-
-            ul.appendChild(document.createElement('li'))
-            .innerHTML = resposta[i].descricao;
-
-            ul.appendChild(document.createElement('li'))
-            .innerHTML = resposta[i].preco;
-
-            document.querySelector('#listaProdutos').appendChild(ul);
+            ul.id = resposta[i].id;
+            ul.classList.add('produto');
+            
+            const liId = document.createElement('li');
+            liId.setAttribute('data-produto', 'id');
+            liId.innerHTML = resposta[i].id;
+            liId.classList.add('produto-id');
+            
+            const liDescricao = document.createElement('li');
+            liDescricao.setAttribute('data-produto', 'descricao');
+            liDescricao.innerHTML = resposta[i].descricao;
+            
+            const liPreco = document.createElement('li');
+            liPreco.setAttribute('data-produto', 'preco');
+            liPreco.innerHTML = resposta[i].preco;
+            
+            ul.append(liId, liDescricao, liPreco);
+            
+            document.querySelector('#listaProdutos').appendChild(ul)
         };
     });
+};
+
+export {buscaProdutos};

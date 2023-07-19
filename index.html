@@ -4,22 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Requisição e Resposta via API</title>
-    <script src="./assets/scripts/javascript.js"></script>
+    <title>Get</title>
 </head>
 <body>
     <header>
         <ul>
-            <li><a href="./paginaGet.html">Read com Get</a></li>
+            <li><a href="./index.html">Read com Get</a></li>
             <li><a href="./paginaPost.html">Creat com Post</a></li>
             <li><a href="./paginaPut.html">Update com Put</a></li>
             <li><a href="./paginaDelete.html">Delete com Delete</a></li>
         </ul>
     </header>
-    <h1>Requisição e Resposta via API</h1>
+    
+    <h1>Read com GET</h1>
+    <div id="listaProdutos"></div>
 
-    <div id="resposta"></div>
+    <script type="module">
+        import {buscaProdutos} from './assets/scripts/paginaGet.js';
+        buscaProdutos();
+    </script>
     <script src="./assets/scripts/estilos.js"></script>
-
 </body>
 </html>
