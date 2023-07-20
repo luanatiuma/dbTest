@@ -6,7 +6,7 @@
 // })
 
 //parte do js que vai ler o arquivo json pelo metodo get
-function buscaProdutos(){
+function buscaProdutos(mostraBtDelete){
     fetch('http://localhost:3000/produtos', {
     method: 'GET', headers: {
         'content-type': 'application/json'
@@ -37,6 +37,16 @@ function buscaProdutos(){
             liPreco.innerHTML = resposta[i].preco;
             
             ul.append(liId, liDescricao, liPreco);
+
+            if(mostraBtDelete === true){
+                const liDelete = document.createElement('li');
+                const btDelete = document.createElement('button');
+                btDelete.innerHTML = '❌';
+                btDelete.value = resposta[i].id;
+                btDelete.classList.add('delete-button');
+
+                ul.appendChild(liDelete).appendChild(btDelete);
+            }
             
             document.querySelector('#listaProdutos').appendChild(ul)
         };

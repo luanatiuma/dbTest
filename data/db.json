@@ -29,16 +29,6 @@
       "id": 8,
       "descricao": "Jaqueta",
       "preco": "102,50"
-    },
-    {
-      "id": 9,
-      "descricao": "Guarda-Chuva",
-      "preco": "30,00"
-    },
-    {
-      "id": 10,
-      "descricao": "",
-      "preco": ""
     }
   ]
 }
