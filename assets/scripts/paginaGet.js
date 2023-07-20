@@ -6,7 +6,7 @@
 // })
 
 //parte do js que vai ler o arquivo json pelo metodo get
-function buscaProdutos(mostraBtDelete){
+function buscaProdutos(mostraBtDelete = false){
     fetch('http://localhost:3000/produtos', {
     method: 'GET', headers: {
         'content-type': 'application/json'
