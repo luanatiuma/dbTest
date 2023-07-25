@@ -22,6 +22,10 @@ function buscaProdutos(mostraBtDelete = false){
             const ul = document.createElement('ul');
             ul.id = resposta[i].id;
             ul.classList.add('produto');
+
+            if(resposta[i].atualizado){
+                ul.style.color = 'blue';
+            }
             
             const liId = document.createElement('li');
             liId.setAttribute('data-produto', 'id');
@@ -44,6 +48,15 @@ function buscaProdutos(mostraBtDelete = false){
                 btDelete.innerHTML = '❌';
                 btDelete.value = resposta[i].id;
                 btDelete.classList.add('delete-button');
+
+                const liCheck = document.createElement('li');
+                const inputCheck = document.createElement('input');
+                inputCheck.type = 'checkbox';
+                inputCheck.value = resposta[i].id;
+
+                liCheck.appendChild(inputCheck);
+
+                ul.insertBefore(liCheck, liId);
 
                 ul.appendChild(liDelete).appendChild(btDelete);
             }
