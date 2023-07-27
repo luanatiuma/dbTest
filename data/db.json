@@ -1,11 +1,6 @@
 {
   "produtos": [
     {
-      "id": 3,
-      "descricao": "Cinto",
-      "preco": "30,99"
-    },
-    {
       "id": 4,
       "descricao": "Mala",
       "preco": "199,90"
